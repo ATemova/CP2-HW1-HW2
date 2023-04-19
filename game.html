@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snake Game</title>
+  <style>
+
+    /*Style for the page*/
+    body {
+      background-image: linear-gradient(to bottom right, #D4D700, #2DC653);
+      color: whitesmoke;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 24px;
+      background-attachment: fixed;
+    }
+
+    /*Game-board*/
+    .game {
+      position: relative;
+      width: 600px;
+      height: 600px;
+      margin: 150px auto;
+      /*Set the background color for the game-board*/
+      background-color: #93E5AB;
+      border: 10px solid green;
+      border-radius: 10px;
+    }
+
+    /*BLue snake*/
+    .snake {
+      width: 200px;
+      height: 20px;
+      /*The snake's color to be blue*/
+      background-color: #22577A;
+      /*Make the snake rounded*/
+      border-radius: 10px;
+      position: absolute;
+      /*Initial position of the snake*/
+      top: 400px;
+      left: 300px;
+    }
+
+    /*Red apple*/
+    .apple {
+      width: 25px;
+      height: 30px;
+      position: absolute;
+      /*Initial position of the apple*/
+      top: 150px;
+      left: 150px;
+      /*The apple's color to be red */
+      background-color: red;
+      /*Make the apple round*/
+      border-radius: 50%;
+    }
+
+    /*Yellow obstacle*/
+    .obstacle {
+      position: absolute;
+      /*The obstacles's color to be orange*/
+      background-color: orange;
+    }
+
+    /*First obstacle*/
+    .obstacle-1 {
+      width: 120px;
+      height: 20px;
+      /*Initial position of the obstacle*/
+      top: 200px;
+      left: 300px;
+      /*Make the obstacle slightly rounded*/
+      border-radius: 20px;
+    }
+
+    /*Second obstacle*/
+    .obstacle-2 {
+      width: 90px;
+      height: 20px;
+      /*Initial position of the obstacle*/
+      top: 250px;
+      left: 100px;
+      /*The obstacle to be more rounded*/
+      border-radius: 20px;
+    }
+
+    /*Third obstacle*/
+    .obstacle-3 {
+      width: 70px;
+      height: 20px;
+      /*Initial position of the obstacle*/
+      top: 550px;
+      left: 200px;
+      border-radius: 20px;
+    }
+
+    /*Restart button*/
+    .restart-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 20px 40px;
+      background-color: #10451D;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 24px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .restart-button:hover {
+      background-color: red;
+      cursor: pointer;
+    }
+
+    /*Timer*/
+    .timer {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 25px;
+    }
+
+    /*Final score*/
+    .finalScore {
+      position: absolute;
+      top: 50px;
+      left: 20px;
+      font-size: 25px;
+    }
+
+    /*Button style*/
+    .backbutton {
+      position: absolute;
+      background-color: #10451D;
+      /* border: 2px solid; */
+      border-radius: 8px;
+      color: whitesmoke;
+      padding: 20px 40px;
+      font-size: 24px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      bottom: 20px;
+      margin-left: -3%;
+    }
+    .backbutton:hover {
+      background-color: red;
+      /* border: 2px solid; */
+    }
+  </style>
+</head>
+<body>
+  <div class="game">
+    <div class="snake"></div>
+    <div class="apple">
+    </div>
+    <div class="obstacle obstacle-1"></div>
+    <div class="obstacle obstacle-2"></div>
+    <div class="obstacle obstacle-3"></div>
+  </div>
+  <a class="restart-button" href="game.html">Restart</a>
+  <div class="timer">Timer: <span id="timer">0</span>
+  </div>
+  <div class="finalScore">Final Score: <span>120</span>
+  </div>
+  <a class="backbutton" href="title.html">Back</a>
+</body>
+</html>
